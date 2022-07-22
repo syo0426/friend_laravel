@@ -33,6 +33,13 @@ class ListController extends Controller
             'lists' => $lists,
         ]);
     }
+    public function detail($id)
+    {
+        $lists = ListModel::find($id);
+        return view('lists.detail', [
+            'lists' => $lists,
+        ]);
+    }
 
     /**
      *店舗登録ページ
@@ -51,6 +58,7 @@ class ListController extends Controller
         $list->title = $request->title;
         $list->genre = $request->genre;
         $list->place = $request->place;
+        $list->detail = $request->detail;
         $list->save();
 
         //一覧画面に戻す
@@ -77,6 +85,7 @@ class ListController extends Controller
             'title' => $request->title,
             'genre' => $request->genre,
             'place' => $request->place,
+            'detail' => $request->detail,
         ]);
         
 

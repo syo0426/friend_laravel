@@ -3,7 +3,7 @@
 
 <div class="panel panel-default">
     <div class="container">
-        <p class="h3">店舗一覧</p>
+        <p class="h3 fst-italic">〜 お店一覧 〜</p>
     </div>
  
     <div class="container">
@@ -32,8 +32,8 @@
                     </td>
                     <td>
                         <!-- TODO: 編集ボタン -->
-                        <a href="{{url('/list/detail/'.$list->id)}}" class="btn">詳細</a>
-                        <a href="{{url('/list/edit/'.$list->id)}}" class="btn">編集</a>
+                        <a href="{{url('/list/detail/'.$list->id)}}" class="btn friend-gurume text-white">詳細</a>
+                        <a href="{{url('/list/edit/'.$list->id)}}" class="btn friend-gurume text-white">編集</a>
                     </td>
                 </tr>
                 @endforeach

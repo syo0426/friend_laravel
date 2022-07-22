@@ -13,5 +13,6 @@ class ListModel extends Model
         'title',
         'genre',
         'place',
+        'detail',
     ];
 }

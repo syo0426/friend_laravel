@@ -21,4 +21,5 @@ Route::get('/list/store', [App\Http\Controllers\ListController::class, 'store'])
 Route::get('/list/edit/{id}', [App\Http\Controllers\ListController::class, 'edit']);
 Route::post('/create', [App\Http\Controllers\ListController::class, 'create']);
 Route::post('/update', [App\Http\Controllers\ListController::class, 'update']);
-Route::get('/product/detail/{id}', [App\Http\Controllers\ProductController::class, 'detail']);
+Route::get('/destroy/{id}', [App\Http\Controllers\ListController::class, 'destroy']);
+Route::get('/list/detail/{id}', [App\Http\Controllers\ListController::class, 'detail']);

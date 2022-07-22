@@ -25,8 +25,14 @@
             <label for="formGroupExampleInput" class="form-label">場所</label>
             <input type="text" class="form-control" id="formGroupExampleInput" name="place">
         </div>
+        <div class="mb-3">
+            <label for="exampleFormControlTextarea1" class="form-label">詳細</label>
+            <textarea class="form-control" id="exampleFormControlTextarea1" name="detail" rows="3"></textarea>
+        </div>
+
+        </div>
         <div class="col-12">
-            <button type="submit" class="btn btn-primary">登録</button>
+            <button type="submit" class="btn friend-gurume text-white">登録</button>
         </div>
         </form>  
     </div>
