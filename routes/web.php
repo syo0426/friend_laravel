@@ -13,9 +13,7 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', [App\Http\Controllers\ListController::class, 'index'])->name('lists');
 Route::get('/lists', [App\Http\Controllers\ListController::class, 'index'])->name('lists');
 Route::get('/list/store', [App\Http\Controllers\ListController::class, 'store']);
 Route::get('/list/edit/{id}', [App\Http\Controllers\ListController::class, 'edit']);
