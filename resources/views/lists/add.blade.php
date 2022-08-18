@@ -11,7 +11,7 @@
         @foreach ($errors->all() as $error)
         <li>{{$error}}</li>
         @endforeach
-        <form action="{{url('/create')}}" method="POST">
+        <form action="{{url('/create')}}" method="POST" enctype="multipart/form-data">
         @csrf
         <div class="mb-3">
             <label for="formGroupExampleInput" class="form-label">店舗名</label>
@@ -29,8 +29,9 @@
             <label for="exampleFormControlTextarea1" class="form-label">詳細</label>
             <textarea class="form-control" id="exampleFormControlTextarea1" name="detail" rows="3"></textarea>
         </div>
+        <input type="file" name="image">
+        <button>アップロード</button>
 
-        </div>
         <div class="col-12">
             <button type="submit" class="btn friend-gurume text-white">登録</button>
         </div>

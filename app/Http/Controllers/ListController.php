@@ -60,10 +60,16 @@ class ListController extends Controller
         $list->place = $request->place;
         $list->detail = $request->detail;
         $list->save();
-
+        // 画像を保存
+        // ファイルチェック
+        if( $request->hasFile('image') ) {
+            // 保存処理
+            $request->file('image')->store('public/');
+        }
         //一覧画面に戻す
         return redirect('/lists');
-    }
+    }    
+    
 
     /**
      *編集ボタンを押した時の処理
