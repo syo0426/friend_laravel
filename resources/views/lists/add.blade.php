@@ -30,7 +30,6 @@
             <textarea class="form-control" id="exampleFormControlTextarea1" name="detail" rows="3"></textarea>
         </div>
         <input type="file" name="image">
-        <button>アップロード</button>
 
         <div class="col-12">
             <button type="submit" class="btn friend-gurume text-white">登録</button>

@@ -26,6 +26,7 @@
                             <th>詳細</th>
                             <td>{{$lists->detail}}</td>
                         </tr>
+                        
                     </tbody>
                 </table>
                 <a href="/list/edit/{{$lists->id}}" class="btn friend-gurume">編集</a>
