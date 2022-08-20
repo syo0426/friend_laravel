@@ -61,10 +61,12 @@ class ListController extends Controller
         $list->detail = $request->detail;
         $list->save();
         // 画像を保存
-        // ファイルチェック
-        if( $request->hasFile('image') ) {
+        // 許可する拡張子
+        $postableExtensions = ['jpg','jpeg','png','gif'];
+        
+        if(in_array($request->image->extension(),$postableExtensions)){
             // 保存処理
-            $request->file('image')->store('public/');
+            $request->file('image')->storeAs('public/',$list->id.'.'.$request->image->extension());
         }
         //一覧画面に戻す
         return redirect('/lists');
