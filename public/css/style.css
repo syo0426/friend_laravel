@@ -22,6 +22,15 @@ a.navbar-brand {
     font-size: 30px;
 }
 
-.detail {
-    
+.img {
+    width: 100%;
+}
+
+/* スマホ用スタイルシート */
+@media screen and (max-width:767px) {
+    img {
+        width: 100%;
+        max-width: 767px;
+}
+
 }

@@ -26,6 +26,7 @@
                             <th>詳細</th>
                             <td>{{$lists->detail}}</td>
                         </tr>
+                        <div class="img">
                         @if(file_exists(public_path().'/storage/'. $lists->id .'.jpg'))
                             <img src="/storage/{{ $lists->id }}.jpg">
                         @elseif(file_exists(public_path().'/storage/'. $lists->id .'.jpeg'))
@@ -35,6 +36,7 @@
                         @elseif(file_exists(public_path().'/storage/'. $lists->id .'.gif'))
                             <img src="/storage/{{ $lists->id }}.gif">
                         @endif
+                        </div>
                         
                     </tbody>
                 </table>
